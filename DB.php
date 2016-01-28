@@ -14,8 +14,8 @@ class DB
         $password = env("MYSQL_PASSWORD", "secret");
 
         try {
-            $this->pdo = new PDO("mysql:host=$serverName;dbname=$databaseName", $username, $password);
-
+            $this->pdo = new PDO("mysql:host=$serverName;dbname=$databaseName", "root");
+            echo $username;exit;
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             // 检测数据库是否存在表
