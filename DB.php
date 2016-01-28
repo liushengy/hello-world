@@ -12,6 +12,7 @@ class DB
         $databaseName = env("MYSQL_INSTANCE_NAME", "homestead");
         $username = env("MYSQL_USERNAME", "homestead");
         $password = env("MYSQL_PASSWORD", "secret");
+
         try {
             $this->pdo = new PDO("mysql:host=$serverName;dbname=$databaseName", $username, $password);
 
@@ -40,7 +41,7 @@ class DB
 
 
         } catch (PDOException $e) {
-            echo "数据库链接失败i: " . $e->getMessage();
+            echo "数据库链接失败: " . $e->getMessage();
             die();
         }
     }
