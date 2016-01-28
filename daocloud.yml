@@ -4,8 +4,8 @@ services:
   - mysql
 
 env:
-  - MYSQL_USERNAME = "liu"
-  - MYSQL_PASSWORD = "123456"
+  - MYSQL_USERNAME = "root"
+  - MYSQL_PASSWORD = ""
   - MYSQL_INSTANCE_NAME = "test"
 
 install:
