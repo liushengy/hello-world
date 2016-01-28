@@ -12,10 +12,10 @@ class DB
         $databaseName = env("MYSQL_INSTANCE_NAME", "homestead");
         $username = env("MYSQL_USERNAME", "homestead");
         $password = env("MYSQL_PASSWORD", "secret");
-        echo $username;
+        // echo $username;
         try {
-            // $this->pdo = new PDO("mysql:host=$serverName;dbname=$databaseName", $username, $password);
-            $this->pdo = new PDO("mysql:host=localhost;dbname=test", 'liu', '123456');
+            $this->pdo = new PDO("mysql:host=$serverName;dbname=$databaseName", $username, $password);
+            // $this->pdo = new PDO("mysql:host=localhost;dbname=test", 'liu', '123456');
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             // 检测数据库是否存在表
