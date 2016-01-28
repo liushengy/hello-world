@@ -14,6 +14,7 @@ class DB
         $password = env("MYSQL_PASSWORD", "secret");
         // echo $username;
         try {
+            mysql_connect('localhost','liu','123456');exit;
             $this->pdo = new PDO("mysql:host=$serverName;dbname=$databaseName", $username, $password);
             // $this->pdo = new PDO("mysql:host=localhost;dbname=test", 'liu', '123456');
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
